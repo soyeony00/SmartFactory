@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# 🏭 SmartFactory (AUTORY)
+### AI-based Intelligent Accident Prevention System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **AI 영상 인식과 IoT 제어를 결합한  
+손 끼임 사고 예방 중심 스마트 팩토리 시스템**
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔍 Overview
 
-### `npm start`
+**SmartFactory(AUTORY)** 는 제조 현장에서 빈번하게 발생하는  
+**손 끼임 사고를 사전에 감지하고, 기계를 즉시 정지시켜 사고를 원천 차단하는  
+지능형 스마트 공장 안전 시스템**입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+기존의 공장 안전 시스템이  
+`사고 감지 → 관리자 알림` 수준에 머물렀다면,  
+본 프로젝트는 한 단계 더 나아가 **위험 상황 발생 즉시 기계 제어까지 수행하는  
+능동적 사고 예방 시스템**을 구현하는 것을 목표로 합니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚨 Problem
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 제조업 현장에서 **끼임 사고는 사망 사고 비율이 가장 높은 유형**
+- 작업자의 부주의, 기계 결함, 환경 요인으로 사고 발생
+- 기존 CCTV 기반 시스템은 **사후 대응 중심**
 
-### `npm run build`
+👉 **사고가 발생하기 전에 “기계가 멈추는 시스템”이 필요**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧠 Key Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ✋ AI 손 인식 기반 사고 예방
+- 카메라 영상에서 **손 객체 실시간 인식**
+- 위험 반경 내 손 감지 시
+  - 즉시 경고 알림
+  - **기계 자동 정지**
+- 손 인식 정확도 **99%**, 사고 방지 성공률 **98%**
 
-### `npm run eject`
+### ⚙️ 실시간 공장 모니터링
+- 컨베이어벨트 상태 실시간 확인
+- 생산 제품 정상/불량 판별
+- 관리자 대시보드 제공
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🌡 공장 환경 이상 감지
+- 온도, 습도, 미세먼지 실시간 수집
+- 기준 초과 시 관리자 알림 전송
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📊 생산 현황 분석
+- 일/월별 생산량
+- 불량률
+- 목표 대비 생산률 시각화
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 👤 관리자 UX & 커스터마이징
+- 직관적인 대시보드 UI
+- 프로필 커스터마이징 (미모티콘)
+- Figma 기반 UI 설계
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🏗 System Architecture
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Factory Camera
+↓
+AI Hand Detection (Vision Model)
+↓
+Risk 판단
+↓
+Machine Control (Stop)
+↓
+Web Dashboard (Monitoring & Alert)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🛠 Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🌐 Frontend
+- HTML / CSS / JavaScript
+- Chart.js (데이터 시각화)
+- Figma (UI 설계)
 
-### Making a Progressive Web App
+### 🖥 Backend
+- Flask (Python)
+- REST API
+- 실시간 알림 로직
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 🤖 AI / Computer Vision
+- OpenCV
+- CNN 기반 손 인식 모델
+- 실시간 영상 처리
 
-### Advanced Configuration
+### 🔌 IoT / Hardware
+- 컨베이어벨트 / 반죽기 연동
+- 센서 기반 온도·환경 데이터 수집
+- 기계 제어 로직 구현
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 👥 Team & Role
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Name | Role | Responsibility |
+|---|---|---|
+| **김소연** | **Frontend / UI Lead** | 대시보드 UI 구현, UX 설계, 실시간 데이터 시각화 |
+| 팀원 A | Backend | 서버 로직, 데이터 처리 |
+| 팀원 B | AI | 손 인식 모델 학습 및 적용 |
+| 팀원 C | Hardware | 센서·기계 제어 연동 |
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ⏱ Development Period
+- **2024.09 ~ 2024.12**
+- 약 **4개월**
+- **팀 프로젝트 (스마트 팩토리 과제)**
+
+---
+
+## 🎯 Performance & Results
+
+- 손 인식 정확도: **99%**
+- 기계 정지 성공률: **98%**
+- 평균 응답 속도: **0.5초 이내**
+- 10시간 연속 테스트에서도 안정적 동작 확인
+
+---
+
+## 📌 What Makes This Project Different
+
+- 단순 감지가 아닌 **즉각적인 기계 제어**
+- 사고 “대응”이 아닌 **사고 “예방” 중심 설계**
+- 실제 제조 공정 시나리오 기반 시스템 구성
+
+---
+
+## 🚀 Future Work
+
+- 다수 기계 동시 제어 확장
+- 음성 경고(TTS) 시스템 도입
+- 관리자 맞춤 대시보드 세분화
+- 대규모 공장 환경 적용
+
+---
+
+## 📎 Notes
+
+- 본 프로젝트는 **팀 프로젝트**이며  
+  해당 레포지토리는 **김소연 개인 포트폴리오 목적**으로 정리되었습니다.
+- 학술·교육 목적의 스마트 팩토리 연구 프로젝트입니다.
+
+---
+
+⭐ **If you’re interested,**  
+본 프로젝트는 **AI · IoT · 웹 기술이 결합된  
+실제 산업 안전 문제 해결 중심 프로젝트**입니다.
