@@ -1,0 +1,39 @@
+.section {
+  width: 45%;
+  height: calc(50% - 20px);
+  margin: 10px; /* 여백을 줄임 */
+  float: left;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 25px; /* 둥근 테두리 설정 */
+  box-shadow: inset 0 0 15px #c1bfc2; /* 안쪽으로 그림자 효과 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 90px;
+}
+
+.content {
+  border-radius: 25px; /* 둥근 테두리 설정 */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* 적절한 패딩 추가 */
+  overflow: hidden; /* 둥근 테두리가 잘 보이도록 설정 */
+  background-color: rgba(255, 255, 255, 0.1); /* 배경색 투명도 설정 */
+}
+
+.chart-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px; /* 적절한 패딩 추가 */
+}
+
+.canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

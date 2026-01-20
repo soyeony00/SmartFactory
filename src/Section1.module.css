@@ -1,0 +1,68 @@
+.section {
+  width: 45%;
+  height: calc(50% - 20px);
+  margin: 10px;
+  float: left;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: inset 0 0 15px #c1bfc2;
+  overflow: hidden; /* 스크롤 제거 */
+  position: relative; /* 화살표 버튼을 위해 position 설정 */
+}
+
+.content {
+  height: 100%; /* 섹션을 꽉 채우도록 수정 */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* 스크롤 숨기기 */
+}
+
+.iframeContainer {
+  width: 100%; /* 섹션에 꽉 차도록 수정 */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: -60px; /* 상단을 자르기 위해 조정 */
+  left: -24px;
+  width: 110%;
+  height: calc(100% + 60px); /* 높이를 늘려 비율 조정 */
+  border: none;
+  transform: scaleX(-1); /* 좌우 반전 */
+  object-fit: cover; /* 스크롤 제거 및 비율 유지 */
+  overflow: hidden; /* 스크롤 숨김 */
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #b47ac0; /* 화살표 버튼 색상 */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrowLeft {
+  left: 10px;
+}
+
+.arrowRight {
+  right: 10px;
+}

@@ -1,0 +1,197 @@
+/* 전체 페이지 및 html, body 스타일 설정 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 회원가입 페이지 전체 레이아웃 */
+.signup-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* 회원가입 페이지 좌우 섹션 레이아웃 */
+.signup-left,
+.signup-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 왼쪽 섹션 스타일 */
+.signup-left {
+  background: linear-gradient(270deg, #4574d8 0%, #ff71d7 100%);
+  color: white;
+  position: relative;
+  width: 50%;
+}
+
+/* 왼쪽 섹션 로고 스타일 */
+.signup-left .logo {
+  width: 60px; /* 로고 크기 조정 */
+  position: absolute; /* 절대 위치 설정 */
+  top: 20px; /* 위쪽 위치 조정 */
+  left: 20px; /* 왼쪽 위치 조정 */
+  cursor: pointer; /* 커서 모양 변경 */
+}
+
+/* 왼쪽 섹션 텍스트 스타일 */
+.signup-left h1 {
+  font-size: 5vw; /* 폰트 크기 조정 */
+  font-weight: bold; /* 글씨 굵기 조정 */
+  margin: 0;
+  text-align: left; /* 왼쪽 정렬 */
+  padding-left: 60px; /* 로고의 왼쪽 끝과 동일하게 왼쪽 여백 설정 (로고의 left 값 + 로고의 width) */
+  position: absolute; /* 절대 위치 설정 */
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* 오른쪽 섹션 스타일 */
+.signup-right {
+  background-color: #ffffff; /* 로그인 박스 색상 변경 */
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* 상위 요소들을 왼쪽 정렬 */
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 오른쪽 섹션 제목 스타일 */
+.signup-right h2 {
+  margin-bottom: 10px;
+  color: #000;
+  width: 100%;
+  text-align: left; /* 왼쪽 정렬 */
+  padding-left: 60px; /* 왼쪽 여백 설정 */
+  font-weight: bold; /* 글씨 굵기 조정 */
+  font-size: 2.5vw;
+  padding-top: 20px; /* 위쪽 여백 추가 */
+}
+
+/* 오른쪽 섹션 폼 스타일 */
+.signup-right form {
+  width: 100%;
+  text-align: left; /* 폼 안의 요소를 왼쪽 정렬 */
+  padding-left: 80px; /* 왼쪽 여백 설정 */
+  margin-top: 60px; /* 폼을 아래로 밀기 */
+}
+
+/* 폼 내부의 각 요소의 공통 스타일 */
+.signup-right form .form-group {
+  margin-bottom: 10px;
+}
+
+.signup-right form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #555;
+}
+
+.signup-right form .input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.signup-right form .input-wrapper input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 80%; /* 수정 */
+}
+
+.signup-right form .small-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #dfe9ff;
+  color: #3160c4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0; /* 추가 */
+}
+
+.signup-right form .small-button:hover {
+  background-color: #c4d6ff;
+}
+
+.signup-right form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 80%; /* 기존 설정을 유지하되, 모든 입력 필드의 너비를 동일하게 설정 */
+}
+
+/* 회원가입 버튼 스타일 */
+.signup-right form .signup-button {
+  width: 15%; /* 버튼 너비 조정 */
+  padding: 10px;
+  background-color: #dfe9ff;
+  color: #3160c4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto; /* 오른쪽 정렬 */
+  display: block; /* 버튼을 블록 요소로 변경하여 text-align 속성에 반응하도록 함 */
+  margin-top: 5vh; /* 위쪽에 여백 추가 */
+  margin-right: 5vw;
+}
+
+.signup-right form .signup-button:hover {
+  background-color: #c4d6ff;
+}
+
+/* 로그인 링크 스타일 */
+.login-link {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 20px;
+  padding-left: 60px; /* 왼쪽 여백 설정 */
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* 에러 메시지 스타일 */
+.error-message,
+.match-message {
+  font-size: 12px;
+  margin-top: 5px; /* 인풋 박스와 메시지 사이 여백 추가 */
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+.error-message {
+  color: red;
+}
+
+.match-message {
+  color: blue;
+}
+
+.signup-left .signup-logo {
+  width: 5vw; /* 뷰포트 너비의 5%로 설정 */
+  max-width: 100px; /* 너무 커지지 않도록 최대 크기 제한 */
+  min-width: 50px; /* 너무 작아지지 않도록 최소 크기 제한 */
+  position: absolute;
+  top: 7vh; /* 뷰포트 높이를 기준으로 위쪽 여백 */
+  left: 3vw; /* 뷰포트 너비를 기준으로 왼쪽 여백 */
+}
